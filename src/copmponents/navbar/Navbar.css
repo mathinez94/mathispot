@@ -1,0 +1,41 @@
+.navbar{
+    width: 100%;
+    height: 10vh;
+    background: #007;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #f6f6f6;
+}
+.logo{
+    font-size: 20px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo-logo{
+    margin: 10px;
+    font-size: 40PX;
+    color: orangered;
+}
+.logo-text{
+    font-family: cursive;
+    color: orangered;
+}
+.navbar nav{
+   margin-right: 20px;
+}
+.navlinks{
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 10px;
+    padding: 5px;
+}
+nav a.active{
+    background-color: orangered;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+}
