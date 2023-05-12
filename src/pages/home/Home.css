@@ -1,0 +1,23 @@
+.home{
+    width: 1024px;
+    margin: auto;
+    height: 100vh;
+    background: #005;
+    display: grid;
+    grid-template-columns: 3 1 1;
+}
+.home-divs{
+    background: #045;
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home-div-texts{
+    text-decoration: none;
+    color: #999;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
