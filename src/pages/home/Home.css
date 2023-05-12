@@ -2,17 +2,24 @@
     width: 1024px;
     margin: auto;
     height: 100vh;
-    background: #005;
+    background: #0005;
     display: grid;
-    grid-template-columns: 3 1 1;
+    grid-template-columns: 1fr 1fr;
 }
 .home-divs{
-    background: #045;
-    margin: 5px;
+    background: #0455;
+    margin: 10px;
     padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.27s;
+}
+.home-divs:hover{
+    background: #0457;
 }
 .home-div-texts{
     text-decoration: none;
