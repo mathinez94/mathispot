@@ -31,9 +31,9 @@
 
 /* MDEDIA SCREEN */
 
-@media only screen and (max-width: 480px) {
+@media only screen and (min-width: 375px) and (max-width: 750px) {
     .home{
-        width: 600px;
+        width: 100%;
         margin: auto;
         height: 80vh;
         /* background: #0095; */
