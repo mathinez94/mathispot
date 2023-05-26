@@ -31,7 +31,7 @@
 
 /* MDEDIA SCREEN */
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 480px) and (max-width: 768px) {
     .home{
         width: 600px;
         margin: auto;
