@@ -23,7 +23,7 @@
 }
 .home-div-texts{
     text-decoration: none;
-    color: #999;
+    color: #f9f9f9;
     font-size: 1.5em;
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -31,7 +31,7 @@
 
 /* MDEDIA SCREEN */
 
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media only screen and (min-width: 750px) {
     .home{
         width: 600px;
         margin: auto;
