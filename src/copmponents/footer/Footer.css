@@ -38,3 +38,40 @@
     font-size: 30px;
  
 }
+
+/* MEDIA QUERRY */
+
+@media screen and (min-width: 600px) {
+    .socials{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .icon{
+        margin: 10px;
+        padding: 5px;
+        font-size: 20px;
+        transition: 0.3s;
+    }
+    .icon:hover{
+        transform: scale(1.1);
+        color: orangered;
+    }
+    
+    .footer-logo{
+        margin: 10px;
+        font-size: 20PX;
+        color: orangered;
+    }
+    .footer-logo-text{
+        font-family: cursive;
+        font-size: 20px;
+        text-decoration: none;
+        color: orangered;
+    }
+    .text{
+        font-size: 20px;
+     
+    }
+    
+  }

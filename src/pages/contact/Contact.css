@@ -7,9 +7,49 @@
     align-items: center;
     color: #f9f9f9;
 }
+
 .contact-icons{
-    margin: 20px;
+    margin: 5px;
     padding: 10px;
-    font-size: 40px;
-    
+    font-size: 30px;
+    color: #f9f9f9;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1.3s;
 }
+
+.contact-icons:hover{
+    color: orangered;
+    transform: scale(1.2);
+}
+.contact .contact-icons .icons{
+    margin: 10px;
+    font-size: 20px;
+}
+
+/* MEDIA SCREEN */
+
+@media screen and (min-width: 600px) {
+    .contact-icons{
+        margin: 5px;
+        padding: 5px;
+        font-size: 20px;
+        color: #f9f9f9;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 1.3s;
+    }
+    
+    .contact-icons:hover{
+        color: orangered;
+        transform: scale(1.2);
+    }
+    .contact .contact-icons .icons{
+        margin: 10px;
+        font-size: 20px;
+    }
+  }

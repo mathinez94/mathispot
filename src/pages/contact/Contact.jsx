@@ -1,15 +1,16 @@
 import React from 'react'
 import './Contact.css'
-import { FaInstagram, FaTwitter, FaTelegramPlane, FaWhatsapp, FaUserNinja, FaFacebook } from 'react-icons/fa'
+import { FaInstagram, FaTwitter, FaTelegramPlane, FaWhatsapp, FaFacebook } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const Contact = () => {
   return (
     <div className='contact'>
-      <FaInstagram className='contact-icons'/><p>Instagram</p>
-      <FaTelegramPlane className='contact-icons'/><p>Telegram</p>
-      <FaTwitter className='contact-icons'/><p>Twitter</p>
-      <FaWhatsapp className='contact-icons'/><p>Whatsapp</p>
-      <FaFacebook className='contact-icons'/><p>Instagram</p>
+     <Link><div className='contact-icons'><FaInstagram className='icons'/><p>Instagram</p></div></Link> 
+      <Link><div className='contact-icons'><FaTelegramPlane className='icons'/><p>Telegram</p></div> </Link>
+      <Link><div className='contact-icons'><FaTwitter  className='icons'/><p>Twitter</p></div></Link> 
+      <Link><div className='contact-icons'><FaWhatsapp className='icons'/><p>Whatsapp</p></div></Link>
+      <Link><div className='contact-icons'><FaFacebook className='icons'/><p>Instagram</p></div></Link>
     </div>
   )
 }
