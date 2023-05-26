@@ -54,14 +54,14 @@ nav a.active{
         color: #f6f6f6;
     }
     .logo{
-        font-size: 10px;
+        font-size: 15px;
         margin: 5px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
     .logo-logo{
-        margin: 5px;
+        margin: 10px;
         font-size: 10PX;
         color: orangered;
     }
@@ -70,14 +70,14 @@ nav a.active{
         color: orangered;
     }
     .navbar nav{
-       margin-right: 5px;
+       margin-bottom: 15px;
     }
     .navlinks{
         color: whitesmoke;
         text-decoration: none;
-        font-size: 10px;
+        font-size: 14px;
         margin: 5px;
-        padding: 3px;
+        
     }
     nav a.active{
         background-color: orangered;
