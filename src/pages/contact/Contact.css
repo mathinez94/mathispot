@@ -31,7 +31,7 @@
 
 /* MEDIA SCREEN */
 
-@media screen and (min-width: 600px) {
+@media only screen and (min-width: 360px) and (max-width: 750px){
     .contact-icons{
         margin: 5px;
         padding: 5px;
@@ -53,3 +53,7 @@
         font-size: 20px;
     }
   }
+/* 
+  MEDIA SCREEN */
+
+ 
