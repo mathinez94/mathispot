@@ -48,20 +48,21 @@ nav a.active{
         height: 10vh;
         background: #007;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        justify-content:center;
         color: #f6f6f6;
     }
     .logo{
-        font-size: 15px;
-        margin: 10px;
+        font-size: 10px;
+        margin: 5px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
     .logo-logo{
         margin: 5px;
-        font-size: 20PX;
+        font-size: 10PX;
         color: orangered;
     }
     .logo-text{
@@ -69,18 +70,18 @@ nav a.active{
         color: orangered;
     }
     .navbar nav{
-       margin-right: 10px;
+       margin-right: 5px;
     }
     .navlinks{
         color: whitesmoke;
         text-decoration: none;
-        font-size: 15px;
+        font-size: 10px;
         margin: 5px;
         padding: 3px;
     }
     nav a.active{
         background-color: orangered;
-        padding: 10px;
+        padding: 5px;
         border: none;
         border-radius: 5px;
     }
