@@ -19,6 +19,8 @@ const Navbar = () => {
                 <NavLink to='/contact' className='navlinks'>Contact</NavLink>
             </nav>
     </div>
+    // MEDIA SCREEN
+
   )
 }
 

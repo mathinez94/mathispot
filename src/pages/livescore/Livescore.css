@@ -1,7 +1,92 @@
-.livescore{
-    width: 100%;
-    height: 100vh;
+.livescoreContainer{
+    width: 1024px;
+    margin: 0 auto;
+    background-color: #0005;
+    height: 100%;
 }
-h1{
-    color: white;
+.liveScoreWrapper{
+    background-color: #f5f5f5;
+    width: 100%;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr 0.3fr  1fr;
+}
+
+.nameOfCompetition{
+    margin: 10px;
+}
+.gameTime{
+    color: red;
+}
+.scoresSection{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.scores{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+    padding: 5px;
+    height: 20px;
+    background-color: #000;
+    border-radius: 5px;
+}
+.teams{
+    font-weight: bold;
+}
+.scoreNumber{
+    color: gold;
+    margin: 5px;
+}
+.dash{
+    font-weight: 200;
+}
+
+                    /* MEDIA SCREEN */
+
+
+@media only screen and (min-width: 360px) and (max-width: 750px){
+    .livescoreContainer{
+        width: 100%;
+        background-color: #0005;
+        height: 100%;
+    }
+    .liveScoreWrapper{
+        background-color: #f5f5f5;
+        width: 100%;
+        margin: 0px 0px 10px 0px;
+        display: block;
+    }
+    
+    .nameOfCompetition{
+        margin: 10px;
+    }
+    .gameTime{
+        color: red;
+    }
+    .scoresSection{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .scores{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 15px;
+        padding: 5px;
+        height: 20px;
+        background-color: #000;
+        border-radius: 5px;
+    }
+    .teams{
+        font-weight: bold;
+    }
+    .scoreNumber{
+        color: gold;
+        margin: 5px;
+    }
+    .dash{
+        font-weight: 200;
+    }
 }

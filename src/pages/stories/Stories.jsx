@@ -24,8 +24,9 @@ const Stories = () => {
             
             try {
             axios.request(options).then((res) => {
+              setData(res.data.newsSources)
               setData(res.data.news)
-              console.log(res.data.news);
+              console.log(res.data.newsSources);
             })
             } catch (error) {
               console.error(error);
@@ -38,7 +39,7 @@ const Stories = () => {
         return <div className="newsContainer" key={news.id}>
           <div className="newsContent">
             <Link to={news.url} target='blank' className='link'>
-              <p className='title'>{news.title}</p>
+              <p className='title'>{news.title}{news.name}</p>
               <img src={news.image} alt="#"  className='storiesImage'/>
               <span className='publishDate'>{news.publishDate}</span>
             </Link>
