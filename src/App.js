@@ -1,4 +1,5 @@
 import './App.css';
+import { QueryClient, QueryClientProvider } from 'react-query';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './copmponents/navbar/Navbar';
 import Home from './pages/home/Home';
@@ -10,10 +11,12 @@ import Contact from './pages/contact/Contact';
 import Footer from './copmponents/footer/Footer';
 
 function App() {
+  const client = new QueryClient();
 
   return (
    
-    <div className="App">  
+    <div className="App"> 
+     <QueryClientProvider client={client}>
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />}/>
@@ -24,6 +27,7 @@ function App() {
           <Route path='/contact' element={<Contact />}/>
         </Routes>
         <Footer />
+        </QueryClientProvider> 
     </div>
   );
 }

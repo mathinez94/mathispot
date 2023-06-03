@@ -37,9 +37,10 @@
         margin: auto;
         height: 80vh;
         /* background: #0095; */
-        display: grid;
-        grid-template-columns: 1fr;
-        justify-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .home-divs{
         background: #005;

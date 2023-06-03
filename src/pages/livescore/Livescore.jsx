@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import './Livescore.css'
 import axios from 'axios'
+import { InfinitySpin } from 'react-loader-spinner'
 
 const Livescore = () => {
+  const [ loading, setLoading ] = useState(false)
   const [data, setData] = useState([])
   useEffect(() => {
+    setLoading(true)
     const options = {
       method: 'GET',
       url: 'https://allscores.p.rapidapi.com/api/allscores/games-scores',
@@ -13,8 +16,8 @@ const Livescore = () => {
         langId: '1',
         sport: '1',
         endDate: '18/01/20223',
-        timezone: 'Europe/London',
-        onlyMajorGames: 'true',
+        timezone: 'Africa/Nigeria',
+        onlyMajorGames: 'false',
         withTop: 'true'
       },
       headers: {
@@ -23,18 +26,26 @@ const Livescore = () => {
       }
     };
     
-    try {
+    
         axios.request(options).then(res => {
           setData(res.data.games);
           console.log(res.data.games);
       })
-    } catch (error) {
-      console.error(error);
-    }
+      .catch(err => console.log(err))
+      .finally(() => setLoading(false))
+    
   },[])
   return (
     <div className='livescoreContainer'>
-      {data.map(result => {
+    { loading ? <InfinitySpin 
+      width='200'
+      color="#4fa94d"
+      className="loader"
+    /> 
+    :
+       
+        
+        data.map(result => {
         return <div key={result.id}>
             <div className="liveScoreWrapper">
               <div className="nameOfCompetition">
@@ -42,7 +53,7 @@ const Livescore = () => {
               </div>
               <div className="livescoreTime">
                {
-                result.gameTime < 0 ? <p>{result.startTime}</p> 
+                 result.gameTime < 0 ? <p>{result.startTime}</p> 
                 : 
                 result.gameTime === 90 ?
                 <p>Ended</p>
@@ -66,6 +77,7 @@ const Livescore = () => {
             </div>
           </div>
       })}
+
     </div>
   )
 }
