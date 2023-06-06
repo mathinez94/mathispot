@@ -6,6 +6,8 @@
     align-items: center;
     justify-content: space-between;
     color: #f6f6f6;
+    position: fixed;
+    top: 0;
 }
 .logo{
     font-size: 20px;
@@ -20,7 +22,7 @@
     color: orangered;
 }
 .logo-text{
-    font-family: cursive;
+   font-family: fantasy;
     color: orangered;
 }
 .navbar nav{
@@ -52,6 +54,7 @@ nav a.active{
         align-items: center;
         justify-content:center;
         color: #f6f6f6;
+        position: fixed;
     }
     .logo{
         font-size: 15px;
@@ -66,7 +69,7 @@ nav a.active{
         color: orangered;
     }
     .logo-text{
-        font-family: cursive;
+        font-family: fantasy;
         color: orangered;
     }
     .navbar nav{

@@ -37,14 +37,11 @@ const Livescore = () => {
   },[])
   return (
     <div className='livescoreContainer'>
-    { loading ? <InfinitySpin 
+    { loading ? <div className='loader'><InfinitySpin 
       width='200'
-      color="#4fa94d"
-      className="loader"
-    /> 
-    :
-       
-        
+      color="#f9f9f9"
+    /> </div>
+    :  
         data.map(result => {
         return <div key={result.id}>
             <div className="liveScoreWrapper">
@@ -61,7 +58,10 @@ const Livescore = () => {
                 <span className='gameTime'><h3>{result.gameTimeDisplay}</h3></span>}  
               </div>
               <div className="scoresSection">
-                <p className='teams'>{result.homeCompetitor.name}</p>
+                <div className="teamNameAndRedCard">
+                  <p className='teams' style={{color: `${result.homeCompetitor.color}`}}>{result.homeCompetitor.name}</p>
+                  {result.homeCompetitor.redCards > 0 && <div className='redCard'></div> }
+                </div>
                   <div className="scores">
                     { result.gameTime < 0 ? <p style={{color: 'gold'}}>Vs</p> 
                     : 
@@ -72,7 +72,10 @@ const Livescore = () => {
                     </div>
                     }
                   </div>
-                <p className='teams'>{result.awayCompetitor.name}</p>
+                  <div className="teamNameAndRedCard">
+                  <p className='teams' style={{color: `${result.awayCompetitor.color}`}}>{result.awayCompetitor.name}</p>
+                  {result.awayCompetitor.redCards > 0 && <div className='redCard'></div> }
+                  </div>
               </div>
             </div>
           </div>
