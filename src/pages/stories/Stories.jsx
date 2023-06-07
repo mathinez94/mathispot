@@ -1,52 +1,44 @@
-import axios from 'axios'
+import React from 'react'
 import './Stories.css'
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useQuery } from 'react-query'
+import axios from 'axios'
+import { Link } from 'react-router-dom';
 
 
+const options = {
+  method: 'GET',
+  url: 'https://livescore6.p.rapidapi.com/news/v2/list',
+  headers: {
+    'X-RapidAPI-Key': '9a6c81044bmshd1b5d03d345b732p1ef8f8jsn6f444d93d598',
+    'X-RapidAPI-Host': 'livescore6.p.rapidapi.com'
+  }
+};
+const dataFetcher = () => {
+  return axios.request(options)
+}
 const Stories = () => {
-  const [data, setData] = useState([])
-  useEffect(() => {
-
-            const options =  {
-              method: 'GET',
-              url: 'https://allscores.p.rapidapi.com/api/allscores/news',
-              params: {
-                sport: '1',
-                timezone: 'America/Chicago',
-                langId: '1'
-              },
-              headers: {
-                'X-RapidAPI-Key': '9a6c81044bmshd1b5d03d345b732p1ef8f8jsn6f444d93d598',
-                'X-RapidAPI-Host': 'allscores.p.rapidapi.com'
-              }
-            };
-            
-            try {
-            axios.request(options).then((res) => {
-              setData(res.data.newsSources)
-              setData(res.data.news)
-              console.log(res.data.newsSources);
-            })
-            } catch (error) {
-              console.error(error);
-            }
-      },[])
   
+    const  { isLoading, data } = useQuery("news", dataFetcher);
+    console.log(data?.data.topStories)
+
+    if(isLoading){
+      return <h1>Loading...</h1>
+    }
   return (
     <div className='stories'>
-      {data.map(news => {
-        return <div className="newsContainer" key={news.id}>
-          <div className="newsContent">
-            <Link to={news.url} target='blank' className='link'>
-              <p className='title'>{news.title}{news.name}</p>
-              <img src={news.image} alt="#"  className='storiesImage'/>
-              <span className='publishDate'>{news.publishDate}</span>
+        {
+          data?.data.topStories.map( news => {
+            return <Link to={news.url} key={news.id} className='link'>
+            <div className="newsContainer">
+              <div className="newsContent">
+                <p className='news-category'>{news.categoryLabel} news</p>
+                <h1 className='news-title'>{news.title}</h1>
+                <img src={news.mainMedia.gallery.url} alt={news.mainMedia.gallery.alt}  width={news.mainMedia.gallery.width} height={news.mainMedia.gallery.height} className='img'/>
+              </div>
+            </div>
             </Link>
-
-          </div>
-        </div>
-      })}
+          })
+        }
     </div>
   )
 }
