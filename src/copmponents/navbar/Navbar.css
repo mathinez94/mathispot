@@ -65,8 +65,8 @@ nav a.active{
         justify-content: center;
     }
     .logo-logo{
-        margin: 10px;
-        font-size: 10PX;
+        margin: 5px;
+        font-size: 15PX;
         color: orangered;
     }
     .logo-text{
@@ -80,7 +80,7 @@ nav a.active{
         color: whitesmoke;
         text-decoration: none;
         font-size: 12px;
-        margin: 5px;
+        margin: 2px;
         
     }
     nav a.active{
