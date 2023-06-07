@@ -6,8 +6,6 @@
     align-items: center;
     justify-content: space-between;
     color: #f9f9f9;
-    position: fixed;
-    bottom: 0;
 }
 .socials{
     display: flex;

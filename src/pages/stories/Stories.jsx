@@ -3,6 +3,7 @@ import './Stories.css'
 import { useQuery } from 'react-query'
 import axios from 'axios'
 import { Link } from 'react-router-dom';
+import { InfinitySpin } from 'react-loader-spinner'
 
 
 const options = {
@@ -22,13 +23,16 @@ const Stories = () => {
     console.log(data?.data.topStories)
 
     if(isLoading){
-      return <h1>Loading...</h1>
+      return <div className='loader'><InfinitySpin 
+      width='200'
+      color="#f9f9f9"
+    /> </div>
     }
   return (
     <div className='stories'>
         {
           data?.data.topStories.map( news => {
-            return <Link to={news.url} key={news.id} className='link'>
+            return <Link to={news.url} key={news.id} target='blank' className='link'>
             <div className="newsContainer">
               <div className="newsContent">
                 <p className='news-category'>{news.categoryLabel} news</p>
