@@ -9,6 +9,11 @@ import Livescore from './pages/livescore/Livescore';
 import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
 import Footer from './copmponents/footer/Footer';
+import { LivescoreLive } from './pages/livescore/LivescoreLive';
+import { LivescoreDate } from './pages/livescore/LivescoreDate';
+import { LivescoreLeague } from './pages/livescore/LivescoreLeague';
+import { NewsPage } from './pages/stories/NewsPage';
+import { NoMatch } from './pages/noMatch/NoMatch';
 
 const queryClient = new QueryClient();
 function App() {
@@ -21,10 +26,18 @@ function App() {
               <Routes>
                 <Route path='/' element={<Home />}/>
                 <Route path='/stories' element={<Stories />}/>
-                <Route path='/predictions' element={<Predictions />}/>
-                <Route path='/livescore' element={<Livescore />}/>
+                <Route path='/predictions' element={<Predictions />} />
+
+                <Route path='/livescore' element={<Livescore />}>
+                  <Route path='live' element={<LivescoreLive />}/>
+                  <Route path='date' element={<LivescoreDate />}/>
+                  <Route path='league' element={<LivescoreLeague />}/>
+                </Route>
+                
                 <Route path='/about' element={<About />}/>
                 <Route path='/contact' element={<Contact />}/>
+                <Route path='/en/native/news' element={<NewsPage />}/>
+                <Route path='*' element={<NoMatch />}/>
               </Routes>
               <Footer />
           </div>

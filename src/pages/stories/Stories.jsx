@@ -32,7 +32,7 @@ const Stories = () => {
     <div className='stories'>
         {
           data?.data.topStories.map( news => {
-            return <Link to={news.url} key={news.id} target='blank' className='link'>
+            return <Link to={news.url} key={news.id}  className='link'>
             <div className="newsContainer">
               <div className="newsContent">
                 <p className='news-category'>{news.categoryLabel} news</p>
