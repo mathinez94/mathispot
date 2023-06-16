@@ -5,3 +5,30 @@
     align-items: center;
     justify-content: center;
 }
+.scoreDetailsContainer{
+    background: #5555;
+}
+.scoreDetailsContent{
+    background: #5553;
+    border-bottom: 1px solid #fff5;
+    width: 100%;
+}
+.events{
+    display: flex;
+    align-items: center;
+}
+.logoAndTeamName{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10px;
+}
+.scores{
+    display: flex;
+    align-items: center;
+    margin: 0px 20px;
+}
+.scoresHt{
+    display: flex;
+    align-items: center;
+    margin: 0px 10px;
+}

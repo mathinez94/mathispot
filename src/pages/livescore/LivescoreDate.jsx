@@ -46,8 +46,10 @@ export const LivescoreDate = () => {
                   <span>{details.Snm}</span>
                 </div>
                 <div className="events">
-                  <img src={details.Events[0].T1[0].Img} alt="logo" className="teamLogo" />
-                  <span>{details.Events[0].T1[0].Nm}</span>
+                  <div className="logoAndTeamName">
+                    <img src={details.Events[0].T1[0].Img} alt="#" className="teamLogo" />
+                    <span className="teamName">{details.Events[0].T1[0].Nm}</span>
+                  </div>
                     
                     <div className="scores">
                       <div className="scoresMatch">
@@ -56,14 +58,17 @@ export const LivescoreDate = () => {
                         <span>{details.Events[0].Tr2}</span>
                       </div>
                       <div className="scoresHt">
+                        <p>ht</p>
                         <span>{details.Events[0].Trh1}</span>
                         <span>-</span>
                         <span>{details.Events[0].Trh2}</span>
                       </div>
                     </div>
 
-                    <span>{details.Events[0].T2[0].Nm}</span>
-                    <img src={details.Events[0].T2[0].Img} alt="logo" className="teamLogo" />
+                    <div className="logoAndTeamName">
+                      <span className="teamName">{details.Events[0].T2[0].Nm}</span>
+                      <img src={details.Events[0].T2[0].Img} alt="#" className="teamLogo" />
+                    </div>
                 </div>
                 {console.log(details)}
               </div>
