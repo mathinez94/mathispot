@@ -14,7 +14,7 @@ const options = {
     Timezone: '-7'
   },
   headers: {
-    'X-RapidAPI-Key': '9a6c81044bmshd1b5d03d345b732p1ef8f8jsn6f444d93d598',
+    'X-RapidAPI-Key': 'f0b4169e9cmsh201998d27af28a4p107c0ajsn708e87b389ee',
     'X-RapidAPI-Host': 'livescore6.p.rapidapi.com'
   }
 };
@@ -42,33 +42,39 @@ export const LivescoreDate = () => {
             return <div className="scoreDetailsContainer" key={details.Sid}>
               <div className="scoreDetailsContent">
                 <div className="competitionName">
-                  <span>{details.Cnm}</span>
-                  <span>{details.Snm}</span>
+                  <span className='competitionGroup'>{details.Cnm}</span>:
+                  <span className='competitionStage'>{details.Snm}</span>
                 </div>
                 <div className="events">
-                  <div className="logoAndTeamName">
-                    <img src={details.Events[0].T1[0].Img} alt="#" className="teamLogo" />
-                    <span className="teamName">{details.Events[0].T1[0].Nm}</span>
+                  <div className="matchStatus">
+                    <span>{details.Events[0].Eps}</span>
                   </div>
-                    
-                    <div className="scores">
-                      <div className="scoresMatch">
-                        <span>{details.Events[0].Tr1}</span>
-                        <span>-</span>
-                        <span>{details.Events[0].Tr2}</span>
-                      </div>
-                      <div className="scoresHt">
-                        <p>ht</p>
-                        <span>{details.Events[0].Trh1}</span>
-                        <span>-</span>
-                        <span>{details.Events[0].Trh2}</span>
-                      </div>
-                    </div>
+                  <div className="matchDetails">
 
                     <div className="logoAndTeamName">
-                      <span className="teamName">{details.Events[0].T2[0].Nm}</span>
-                      <img src={details.Events[0].T2[0].Img} alt="#" className="teamLogo" />
+                      <img src={details.Events[0].T1[0].Img} alt="#" className="teamLogo" />
+                      <span className="teamName">{details.Events[0].T1[0].Nm}</span>
                     </div>
+                      
+                      <div className="scores">
+                        <div className="scoresMatch">
+                          <span>{details.Events[0].Tr1}</span>
+                          <span>-</span>
+                          <span>{details.Events[0].Tr2}</span>
+                        </div>
+                        <div className="scoresHt">
+                          <p>ht</p>
+                          <span>{details.Events[0].Trh1}</span>
+                          <span>-</span>
+                          <span>{details.Events[0].Trh2}</span>
+                        </div>
+                      </div>
+
+                      <div className="logoAndTeamName">
+                        <span className="teamName">{details.Events[0].T2[0].Nm}</span>
+                        <img src={details.Events[0].T2[0].Img} alt="#" className="teamLogo" />
+                      </div>
+                  </div>
                 </div>
                 {console.log(details)}
               </div>
