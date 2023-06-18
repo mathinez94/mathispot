@@ -10,7 +10,7 @@ const options = {
   method: 'GET',
   url: 'https://livescore6.p.rapidapi.com/news/v2/list',
   headers: {
-    'X-RapidAPI-Key': '9a6c81044bmshd1b5d03d345b732p1ef8f8jsn6f444d93d598',
+    'X-RapidAPI-Key': 'f0b4169e9cmsh201998d27af28a4p107c0ajsn708e87b389ee',
     'X-RapidAPI-Host': 'livescore6.p.rapidapi.com'
   }
 };
