@@ -12,8 +12,8 @@ const Predictions = () => {
     {  username: 'Mathinez', country: 'afcon', teams: 'uganda vs algeria', prediction: 'ov 1.5'},
     {  username: 'Mathinez', country: 'afcon', teams: 'Sierra Leone vs nigeria', prediction: '0v 1.5'},
     {  username: 'Mathinez', country: 'concacaf', teams: 'panama vs mexico', prediction: 'ov1.5'},
-    {  username: 'Mathinez', country: 'friendlies', teams: 'venezuela vs guatemala', prediction: 'home'},
-    {  username: 'Mathinez', country: 'friendlies', teams: 'singapore vs solomon island', prediction: 'home'},
+    {  username: 'Mathinez', country: 'friendlies', teams: 'venezuela vs guatemala', prediction: 'draw/home'},
+    {  username: 'Mathinez', country: 'friendlies', teams: 'singapore vs solomon island', prediction: 'draw/home'},
     {  username: 'Mathinez', country: 'friendlies', teams: 'egypt vs south sudan', prediction: 'home'}
   ]);
 
