@@ -11,7 +11,6 @@ import Contact from './pages/contact/Contact';
 import Footer from './copmponents/footer/Footer';
 import { LivescoreLive } from './pages/livescore/LivescoreLive';
 import { LivescoreDate } from './pages/livescore/LivescoreDate';
-import { LivescoreLeague } from './pages/livescore/LivescoreLeague';
 import { NewsPage } from './pages/stories/NewsPage';
 import { NoMatch } from './pages/noMatch/NoMatch';
 
@@ -31,7 +30,6 @@ function App() {
                 <Route path='/livescore' element={<Livescore />}>
                   <Route path='live' element={<LivescoreLive />}/>
                   <Route path='date' element={<LivescoreDate />}/>
-                  <Route path='league' element={<LivescoreLeague />}/>
                 </Route>
                 
                 <Route path='/about' element={<About />}/>

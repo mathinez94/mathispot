@@ -5,6 +5,7 @@
     /* background: #0095; */
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin-top: 10vh;
 }
 .home-divs{
     background: #005;

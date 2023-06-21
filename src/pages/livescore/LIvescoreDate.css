@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
 }
+
 .scoreDetailsContainer{
     background: #5555;
 }
@@ -12,23 +13,148 @@
     background: #5553;
     border-bottom: 1px solid #fff5;
     width: 100%;
+    height: 100%;
+    align-items: center;
+    
+}
+.competitionName{
+    text-align: center;
+    color: orangered;
+}
+.competitionStage{
+    margin-left: 5px;
+    color: #000;
+}
+.competitionGroup{
+    color: orangered;
 }
 .events{
     display: flex;
     align-items: center;
+    /* justify-content: center; */
+    margin-left: 5px;
+}
+.matchStatus{
+    flex: 1;
+}
+.matchDetails{
+    flex: 3;
+    display: flex;
+    align-items: center;
 }
 .logoAndTeamName{
+    flex: 2;
     display: flex;
     justify-content: space-between;
     margin: 0px 10px;
 }
 .scores{
+    flex: 0.5;
     display: flex;
     align-items: center;
     margin: 0px 20px;
+    background: #555777;
+    height: 30px;
+    padding: 0px 5px;
+    border-radius: 5px;
+}
+.scoresMatch{
+    font-weight: bold;
+    color: gold;
 }
 .scoresHt{
     display: flex;
     align-items: center;
     margin: 0px 10px;
+    color: #333;
+}
+.scoresHt p{
+    margin-right: 5px;
+}
+.teamName{
+    font-weight: bolder;
+    color: #fff888;
+}
+.calender{
+    width: 20%;
+}
+.showDateToggle{
+    background: #005;
+    color: #f9f9f9;
+    cursor: pointer;
+}
+
+/* MEDIA QUERRY */
+
+@media only screen and (min-width: 360px) and (max-width: 750px){
+    .scoreDetailsContent{
+        background: #5553;
+        border-bottom: 1px solid #fff5;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        
+    }
+    .competitionName{
+        text-align: center;
+        color: orangered;
+    }
+    .competitionStage{
+        margin-left: 5px;
+        color: orangered;
+    }
+    .competitionGroup{
+        color: orangered;
+    }
+    .events{
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+        margin-left: 5px;
+    }
+    .matchStatus{
+        flex: 0.5;
+    }
+    .matchDetails{
+        flex: 3;
+        display: flex;
+        align-items: center;
+    }
+    .logoAndTeamName{
+        flex: 2;
+        display: flex;
+        justify-content: space-between;
+        margin: 0px 10px;
+    }
+    .scores{
+        flex: 0.5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px 10px;
+        background: #555777;
+        height: 30px;
+        width: 40px;
+        padding: 0px 7px;
+        border-radius: 5px;
+    }
+    .scoresMatch{
+
+        font-weight: bold;
+        color: gold;
+    }
+ 
+    .teamName{
+        font-weight: bolder;
+        color: #fff888;
+    }
+    .calender{
+        text-align: center;
+        width: 100%;
+    }
+    .showDateToggle{
+        background: #005;
+        color: #f9f9f9;
+        cursor: pointer;
+    }
 }
