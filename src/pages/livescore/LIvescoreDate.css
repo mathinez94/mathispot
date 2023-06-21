@@ -23,7 +23,7 @@
 }
 .competitionStage{
     margin-left: 5px;
-    color: #000;
+    color: orangered;
 }
 .competitionGroup{
     color: orangered;
@@ -61,16 +61,9 @@
 .scoresMatch{
     font-weight: bold;
     color: gold;
+    text-align: center;
 }
-.scoresHt{
-    display: flex;
-    align-items: center;
-    margin: 0px 10px;
-    color: #333;
-}
-.scoresHt p{
-    margin-right: 5px;
-}
+
 .teamName{
     font-weight: bolder;
     color: #fff888;
