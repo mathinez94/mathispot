@@ -1,8 +1,8 @@
 .livescore{
        margin-top: 10vh;
        width: 100%;
-       height: fit-content;
-       background: #000;
+       height: 100vh;
+       background: #0075;
        /* position: absolute; */
 }
 .livescoreNav{

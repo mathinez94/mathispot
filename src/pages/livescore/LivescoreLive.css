@@ -1,6 +1,126 @@
 .LivescoreLive{
     width: 100%;
     height: 100%;
-    background-color: #999;
+    background-color: #9995;
 }
+.loader{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.liveMatchesContent{
+    background: #5553;
+    border-bottom: 1px solid #fff5;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+.competitionNames{
+    text-align: center;
+    color: orangered;
+}
+.competitionGroup{
+    color: orangered;
+}
+.events{
+    display: flex;
+    align-items: center;
+    background: #0005;
+    /* justify-content: center; */
+    margin-left: 5px;
+}
+.matchStatus{
+    flex: 1;
+}
+.matchDetails{
+    flex: 3;
+    display: flex;
+    align-items: center;
+}
+.liveScoreTeamnames{
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10px;
+}
+.scores{
+    flex: 0.5;
+    display: flex;
+    align-items: center;
+    margin: 0px 20px;
+    background: #555777;
+    height: 30px;
+    padding: 0px 5px;
+    border-radius: 5px;
+}
+.liveScoreScores{
+    font-weight: bold;
+    color: gold;
+    text-align: center;
+}
+.teamName{
+    font-weight: bolder;
+    color: #fff888;
+}
+
+                                                /* MEDIA SCREEN */
+                                                
+ @media only screen and (min-width: 360px) and (max-width: 750px){
+    .liveMatchesContent{
+        background: #5553;
+        border-bottom: 1px solid #fff5;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+    }
+    .competitionNames{
+        text-align: center;
+        color: orangered;
+    }
+    .competitionGroup{
+        color: orangered;
+    }
+    .events{
+        display: flex;
+        align-items: center;
+        background: #0005;
+        /* justify-content: center; */
+        margin-left: 5px;
+    }
+    .matchStatus{
+        flex: 1;
+    }
+    .matchDetails{
+        flex: 3;
+        display: flex;
+        align-items: center;
+    }
+    .liveScoreTeamnames{
+        flex: 2;
+        display: flex;
+        justify-content: space-between;
+        margin: 0px 10px;
+    }
+    .scores{
+        flex: 0.5;
+        display: flex;
+        align-items: center;
+        margin: 0px 20px;
+        background: #555777;
+        height: 30px;
+        padding: 0px 5px;
+        border-radius: 5px;
+    }
+    .liveScoreScores{
+        font-weight: bold;
+        color: gold;
+        text-align: center;
+    }
+    .teamName{
+        font-weight: bolder;
+        color: #fff888;
+    }
+ }                                             
 

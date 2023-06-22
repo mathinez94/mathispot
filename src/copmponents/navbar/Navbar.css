@@ -1,7 +1,7 @@
 .navbar{
     width: 100%;
     height: 10vh;
-    background: #007;
+    background: #047;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -38,7 +38,7 @@
 }
 nav a.active{
     background-color: orangered;
-    padding: 20px;
+    padding: 10px;
     border: none;
     border-radius: 5px;
 }
@@ -49,7 +49,7 @@ nav a.active{
     .navbar{
         width: 100%;
         height: 10vh;
-        background: #007;
+        background: #047;
         display: flex;
         flex-direction: column;
         align-items: center;

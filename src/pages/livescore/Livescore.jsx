@@ -11,7 +11,7 @@ const Livescore = () => {
     <div className='livescore'>
       <nav className='livescoreNav'>
         <Link to='live' className='livescoreNavLink'>Live</Link>
-        <Link to='date' className='livescoreNavLink'>date</Link>
+        <Link to='date' className='livescoreNavLink'>today</Link>
       </nav>
       <div className="outlet">
         <Outlet />
