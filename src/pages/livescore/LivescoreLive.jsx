@@ -22,7 +22,7 @@ export const LivescoreLive = () => {
   const dataFetcher = () => {
     return  axios.request(options);
   }
-  const  { isLoading, data } = useQuery("live", dataFetcher);
+  const  { isLoading, data } = useQuery("live", dataFetcher, {refetchInterval: 2000});
   console.log(data?.data.Stages)
 
   if(isLoading){
