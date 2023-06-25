@@ -10,7 +10,7 @@ const options = {
   method: 'GET',
   url: 'https://livescore6.p.rapidapi.com/news/v2/list',
   headers: {
-    'X-RapidAPI-Key': 'f0b4169e9cmsh201998d27af28a4p107c0ajsn708e87b389ee',
+    'X-RapidAPI-Key': '90f1f5611cmsh71a35539b7795f8p1e0ac0jsn17117842c2cb',
     'X-RapidAPI-Host': 'livescore6.p.rapidapi.com'
   }
 };
@@ -25,7 +25,7 @@ const Stories = () => {
     if(isLoading){
       return <div className='loader'><InfinitySpin 
       width='200'
-      color="#f9f9f9"
+      color="#000"
     /> </div>
     }
   return (

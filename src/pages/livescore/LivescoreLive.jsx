@@ -2,7 +2,6 @@ import React from 'react'
 import './LivescoreLive.css'
 import axios from 'axios'
 import { useQuery } from 'react-query'
-// import { useState } from 'react'
 import { InfinitySpin } from 'react-loader-spinner'
 
 export const LivescoreLive = () => {
@@ -14,7 +13,7 @@ export const LivescoreLive = () => {
       Timezone: '-7'
     },
     headers: {
-      'X-RapidAPI-Key': 'f0b4169e9cmsh201998d27af28a4p107c0ajsn708e87b389ee',
+      'X-RapidAPI-Key': '90f1f5611cmsh71a35539b7795f8p1e0ac0jsn17117842c2cb',
       'X-RapidAPI-Host': 'livescore6.p.rapidapi.com'
     }
   };
@@ -22,7 +21,7 @@ export const LivescoreLive = () => {
   const dataFetcher = () => {
     return  axios.request(options);
   }
-  const  { isLoading, data } = useQuery("live", dataFetcher, {refetchInterval: 2000});
+  const  { isLoading, data } = useQuery("live", dataFetcher);
   console.log(data?.data.Stages)
 
   if(isLoading){

@@ -4,9 +4,8 @@ import { Link, Outlet } from 'react-router-dom'
 
 
 
-
 const Livescore = () => {
-
+   
   return (
     <div className='livescore'>
       <nav className='livescoreNav'>

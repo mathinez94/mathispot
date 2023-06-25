@@ -1,5 +1,5 @@
 .table-container{
-    background-color: #0005;
+    background: #ccc5ef;
     width: 80%;
     margin: auto;
     height: 100%;
@@ -10,13 +10,12 @@
 }
 .rules-container{
     flex: 1;
-    width: 80%;
-    margin: auto;
+    width: 100%;
 }
 .rules-container .rules-welcome-note{
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
-    color: #f9f9f9;
+    color: #000;
     text-align: center;
 }
 .rules-container h1{
@@ -28,8 +27,8 @@
 }
 
 .rules-container ol li{
-    font-size: 20px;
-    color: #f9f9f9;
+    font-size: 15px;
+    color: #000;
 }
 .table-wrapper{
     flex: 3;
@@ -75,7 +74,7 @@
 }
 .predictionImgContainer{
     flex: 1;
-    width: 80%;
+    width: 100%;
     margin-top: 20px;
 }
 .prediction-img{
@@ -88,7 +87,7 @@
 
 @media only screen and (min-width: 360px) and (max-width: 750px){
     .table-container{
-        background-color: #0005;
+        background: #ccc5ef;
         width: 100%;
         height: 100%;
         display: flex;
@@ -103,7 +102,7 @@
     .rules-container .rules-welcome-note{
         font-size: 15px;
         font-weight: bold;
-        color: #f9f9f9;
+        color: #000;
         text-align: center;
     }
     .rules-container h1{
@@ -117,7 +116,7 @@
     .rules-container ol li{
         font-size: 15px;
         margin: 5px 0px;
-        color: #f9f9f9;
+        color: #000;
     }
     .table-wrapper{
         flex: 3;
@@ -137,7 +136,7 @@
         color: #f9f9f9;
     }
     .table-content tbody{
-        background: #f9f9f9;
+        background: #ccc5ef;
     }
     .table-content th, .table-content td{
         padding: 2px;

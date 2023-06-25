@@ -48,7 +48,7 @@
        .livescore{
               margin-top: 10vh;
               width: 100%;
-              height: fit-content;
+              height: 100%;
               background: #000;
               /* position: absolute; */
        }

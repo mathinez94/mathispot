@@ -1,8 +1,5 @@
 .App {
-  background-image: url(./images/background.jpg) ;
-  background-position: center;
-  background-size: cover;
-  object-fit: fill;
+  background: #fffcff;
   width: 100%;
   height: fit-content;
   position: absolute;

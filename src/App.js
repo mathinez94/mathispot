@@ -13,9 +13,12 @@ import { LivescoreLive } from './pages/livescore/LivescoreLive';
 import { LivescoreDate } from './pages/livescore/LivescoreDate';
 import { NewsPage } from './pages/stories/NewsPage';
 import { NoMatch } from './pages/noMatch/NoMatch';
+import { useState } from 'react';
+
 
 const queryClient = new QueryClient();
 function App() {
+  const [ displayStats, setDisplayStats ] = useState(false)
 
   return (
    
@@ -27,11 +30,14 @@ function App() {
                 <Route path='/stories' element={<Stories />}/>
                 <Route path='/predictions' element={<Predictions />} />
 
-                <Route path='/livescore' element={<Livescore />}>
-                  <Route path='live' element={<LivescoreLive />}/>
-                  <Route path='date' element={<LivescoreDate />}/>
+                <Route path='/livescore' element={<Livescore 
+                displayStats={displayStats}
+                setDisplayStats={setDisplayStats}
+                />}>
+                  <Route path='live' element={<LivescoreLive setDisplayStats={setDisplayStats}/>}/>
+                  <Route path='date' element={<LivescoreDate setDisplayStats={setDisplayStats}/>}/>
                 </Route>
-                
+
                 <Route path='/about' element={<About />}/>
                 <Route path='/contact' element={<Contact />}/>
                 <Route path='/en/native/news' element={<NewsPage />}/>
