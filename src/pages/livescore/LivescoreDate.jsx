@@ -21,7 +21,7 @@ export const LivescoreDate = () => {
     url: 'https://livescore6.p.rapidapi.com/matches/v2/list-by-date',
     params: {
       Category: 'soccer',
-      Date: '20230622',
+      Date: '20230625',
       Timezone: '-7'
     },
     headers: {
@@ -68,7 +68,7 @@ export const LivescoreDate = () => {
                     </div>
                     <div className="events">
                       <div className="matchStatus">
-                        {details.Events[0].Eps === 'NS' ? <span>{details.Events[0].Esd}</span> : <span>{details.Events[0].Eps}</span>}
+                        {<span>{details.Events[0].Eps}</span>}
                       </div>
                       <div className="matchDetails">
 
