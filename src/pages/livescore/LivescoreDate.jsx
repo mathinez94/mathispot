@@ -21,7 +21,7 @@ export const LivescoreDate = () => {
     url: 'https://livescore6.p.rapidapi.com/matches/v2/list-by-date',
     params: {
       Category: 'soccer',
-      Date: '20230625',
+      Date: '20230627',
       Timezone: '-7'
     },
     headers: {
