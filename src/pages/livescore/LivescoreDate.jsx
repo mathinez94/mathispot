@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './LIvescoreDate.css'
 import axios from 'axios'
 import { useQuery } from 'react-query'
 import { useState } from 'react'
 import { InfinitySpin } from 'react-loader-spinner'
-import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
+import { Calendar } from 'react-date-range'
+import format from 'date-fns/format'
+import 'react-date-range/dist/styles.css'; // main css file
+import 'react-date-range/dist/theme/default.css'; // theme css file
 
 
 
@@ -14,14 +16,19 @@ import 'react-calendar/dist/Calendar.css';
 
 export const LivescoreDate = () => {
   
-  const [date, setDate] = useState(new Date());
+  const [calenderDate, setCalenderDate] = useState('');
   const [showDate, setShowDate] = useState(false);
+
+  useEffect(() => {
+    setCalenderDate(new Date())
+  },[])
+  
   const options = {
     method: 'GET',
     url: 'https://livescore6.p.rapidapi.com/matches/v2/list-by-date',
     params: {
       Category: 'soccer',
-      Date: '20230627',
+      Date: `${calenderDate}`,
       Timezone: '-7'
     },
     headers: {
@@ -29,6 +36,7 @@ export const LivescoreDate = () => {
       'X-RapidAPI-Host': 'livescore6.p.rapidapi.com'
     }
   };
+
   const dataFetcher = () => {
     return axios.request(options)
   }
@@ -42,19 +50,26 @@ export const LivescoreDate = () => {
   /> </div>
   }
 
-   
+  
+  const setDate = (date) => {
+    setCalenderDate(format(date, 'yyyyMMdd'))
+  }
+
 
   return (
     <div className='LivescoreDate'>
       <div className="calender">
-        <p  onClick={()=>setShowDate(!showDate)} className='showDateToggle'>select date</p>
+        {/* <p onClick={()=>setShowDate(!showDate)}>select date</p> */}
+        <input 
+        className='showDateToggle'
+        value={calenderDate}
+        readOnly
+        />
         { showDate && 
         <Calendar  
+        date={new Date()}
         onChange={ setDate} 
-        value={date}
-       
         />}
-        {date.toLocaleDateString()}
       </div>
       <div className="outlet">
 
@@ -92,7 +107,7 @@ export const LivescoreDate = () => {
                           </div>
                       </div>
                     </div>
-                    {console.log(details)}
+                    {/* {console.log(details)} */}
                   </div>
                 </div>
               })

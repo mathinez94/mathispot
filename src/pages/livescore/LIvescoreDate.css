@@ -1,3 +1,5 @@
+
+
 .loader{
     width: 100%;
     height: 100vh;
@@ -6,14 +8,11 @@
     justify-content: center;
 }
 
-.scoreDetailsContainer{
-    background: #5555;
-}
 .scoreDetailsContent{
     background: #5553;
     border-bottom: 1px solid #fff5;
     width: 100%;
-    height: 100%;
+    height: fit-content;
     align-items: center;
     
 }
@@ -76,6 +75,10 @@
     background: #005;
     color: #f9f9f9;
     cursor: pointer;
+    text-align: center;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
 }
 
 /* MEDIA QUERRY */
@@ -97,9 +100,11 @@
     .competitionStage{
         margin-left: 5px;
         color: orangered;
+        font-size: 10px;
     }
     .competitionGroup{
         color: orangered;
+        font-size: 10px;
     }
     .events{
         display: flex;
@@ -110,6 +115,7 @@
     }
     .matchStatus{
         flex: 0.5;
+        font-size: 10px;
     }
     .matchDetails{
         flex: 3;
@@ -138,11 +144,13 @@
 
         font-weight: bold;
         color: gold;
+        font-size: 10px;
     }
  
     .teamName{
         font-weight: bolder;
         color: #fff888;
+        font-size: 10px;
     }
     .calender{
         text-align: center;

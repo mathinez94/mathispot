@@ -10,7 +10,7 @@ const Contact = () => {
       <Link><div className='contact-icons'><FaTelegramPlane className='icons'/><p>Telegram</p></div> </Link>
       <Link><div className='contact-icons'><FaTwitter  className='icons'/><p>Twitter</p></div></Link> 
       <Link><div className='contact-icons'><FaWhatsapp className='icons'/><p>Whatsapp</p></div></Link>
-      <Link><div className='contact-icons'><FaFacebook className='icons'/><p>Instagram</p></div></Link>
+      <Link><div className='contact-icons'><FaFacebook className='icons'/><p>Facebook</p></div></Link>
     </div>
   )
 }

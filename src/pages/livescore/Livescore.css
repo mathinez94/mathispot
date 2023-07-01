@@ -1,9 +1,10 @@
 .livescore{
-       margin-top: 10vh;
+       margin-top: 15vh;
        width: 100%;
-       height: 100vh;
-       background: #0075;
-       /* position: absolute; */
+       height: fit-content;
+       position: relative;
+       bottom: 5vh;
+       
 }
 .livescoreNav{
        
@@ -36,7 +37,7 @@
        background: #0005;
        width: 80%;
        margin: auto;
-       height: 100%;
+       height: fit-content;
        color: #f9f9f9;
       
 
@@ -46,11 +47,12 @@
 
 @media only screen and (min-width: 360px) and (max-width: 750px){
        .livescore{
-              margin-top: 10vh;
+              margin-top: 15vh;
               width: 100%;
               height: 100%;
               background: #000;
-              /* position: absolute; */
+              position: relative;
+              bottom: 5vh;
        }
        
        .outlet{
@@ -58,6 +60,12 @@
               width: 100%;
               height: 100%;
               color: #f9f9f9;
-       }   
+       }  
+       .livescoreNav a{
+              text-decoration: none;
+              margin: 0px 10px;
+              font-size: 15px;
+              color: #f9f9f9;
+       } 
 }
 
