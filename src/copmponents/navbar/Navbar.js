@@ -1,23 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Navbar.css"
-import { NavLink, Link } from 'react-router-dom'
-import {FaUserNinja} from 'react-icons/fa'
+import DestopMenu from './DestopMenu';
+import MobileMenu from './MobileMenu';
+import { Drawer } from 'antd';
+import { MenuOutlined } from '@ant-design/icons';
+import { Link } from 'react-router-dom'
+import { MediumCircleFilled } from '@ant-design/icons';
 
 const Navbar = () => {
+
+  const [selected, setSelected] = useState(false);
   return (
     <div className='navbar'>
-         <div className="logo">
-            <FaUserNinja className='logo-logo'/>
-               <Link to='/' ><span className='logo-text'>MathiSpot</span></Link> 
-            </div>
-            <nav >
-                <NavLink to='/' className='navlinks'>Home</NavLink>
-                <NavLink to='/stories' className='navlinks'>Stories</NavLink>
-                <NavLink to='/predictions' className='navlinks'>Predictions</NavLink>
-                <NavLink to='/livescore' className='navlinks'>Livescore</NavLink>
-                <NavLink to='/about' className='navlinks'>About</NavLink>
-                <NavLink to='/contact' className='navlinks'>Contact</NavLink>
-            </nav>
+      <div className="mobileViewIcon">
+        <MenuOutlined onClick={() => setSelected(true)} style={{fontSize: '40px', padding:'20px', flex:'1'}}/> 
+      <div className="menulogo">
+        <MediumCircleFilled style={{fontSize:'40px'}}/>
+        <Link to='/'  className='logoText'>Mathispot</Link>
+      </div>
+      </div>
+      <div className="desktopMenu">
+        <DestopMenu />
+      </div>
+      <div className="mobileMenu">
+        <Drawer
+        placement= 'left'
+        open={selected}
+        closable={false}
+        onClose={() => {setSelected(false)}}
+        >
+           <MobileMenu />
+        </Drawer>
+      </div>
     </div>
     // MEDIA SCREEN
 
@@ -25,3 +39,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+        

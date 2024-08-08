@@ -1,6 +1,4 @@
 .App {
-  background: #fffcff;
-  width: 100%;
-  height: fit-content;
-  position: absolute;
+  width: 100vw;
+  height: 100vh;
 }

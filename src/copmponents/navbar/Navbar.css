@@ -1,90 +1,53 @@
-.navbar{
-    width: 100%;
-    height: 10vh;
-    background: #ccc5ef;
+.desktopView{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: fixed;
-    top: 0;
-    z-index: 2;
 }
-.logo{
-    font-size: 20px;
-    margin: 10px;
+.menulogo{
+    flex: 1;
+    text-align: center;
+    padding: 30px;
+    font-size: large;
+}
+.logoText{
+    text-decoration: none;
+     margin:5px;
+     color:red;
+     font-style: oblique;
+     font-weight: 500;
+}
+.mobileViewIcon .menulogo{
+    flex: 2;
+    align-items: center;
+}
+.mobileViewIcon{
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-.logo-logo{
-    margin: 10px;
-    font-size: 40PX;
-    color: orangered;
-}
-.logo-text{
-   font-family: fantasy;
-    color: orangered;
-}
-.navbar nav{
-   margin-right: 20px;
-}
-.navlinks{
-    color: #000;
-    text-decoration: none;
-    font-size: 20px;
-    margin: 10px;
-    padding: 5px;
-}
-nav a.active{
-    background-color: orangered;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
+    justify-content: space-between;
+    height: 30px;
+    padding: 30px 0px 0px 0px;
 }
 
+/* media querry desktop */
+@media (min-width: 586px){
+    .MobileView{
+        display: none;
+      }
+      .mobileViewIcon .menulogo{
+        display: none;
+    }
+    .mobileViewIcon{
+        display: none;
+    }
+  
+}
+ /* media quarry mobile */
+@media (max-width: 586px){
+     .desktopView{
+        display: none;
+     }
+     
+  
+}
 
-/* MEDIA QUERRY */
-@media only screen and (min-width: 360px) and (max-width: 750px){
-    .navbar{
-        width: 100%;
-        height: 10vh;
-        background: #ccc5ef;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content:center;
-        position: fixed;
-    }
-    .logo{
-        font-size: 15px;
-        margin: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .logo-logo{
-        margin: 5px;
-        font-size: 15PX;
-        color: orangered;
-    }
-    .logo-text{
-        font-family: fantasy;
-        color: orangered;
-    }
-    .navbar nav{
-       margin-bottom: 15px;
-    }
-    .navlinks{
-        color: #000;
-        text-decoration: none;
-        font-size: 12px;
-        margin: 2px;
-        
-    }
-    nav a.active{
-        background-color: orangered;
-        padding: 5px;
-        border: none;
-        border-radius: 5px;
-    }
-  }
