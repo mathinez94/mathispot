@@ -24,6 +24,7 @@ const Navbar = () => {
       </div>
       <div className="mobileMenu">
         <Drawer
+         style={{width: '70%'}}
         placement= 'left'
         open={selected}
         closable={false}

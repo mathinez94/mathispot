@@ -8,7 +8,6 @@ const MobileMenu = () => {
   return (
     <div className='MobileView'>
         <Menu 
-        mode='inline'
         onClick={({key})=>{
             if(key === 'signout'){
              // do your signout function here
