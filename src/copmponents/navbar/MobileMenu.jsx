@@ -16,8 +16,7 @@ const MobileMenu = () => {
             }
          }}
         items={[
-            {label: 'Home', key: '/'},
-            {label: 'Stories', key: '/stories'},
+            {label: 'Stories', key: '/'},
             {label: 'Prediction', key: '/predictions'},
             {label: 'Livescore', key: '/livescore'},
         ]}
