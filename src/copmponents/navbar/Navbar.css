@@ -1,7 +1,10 @@
+
 .desktopView{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px dashed #0006;
+    /* margin-bottom: 20px; */
 }
 .menulogo{
     flex: 1;
