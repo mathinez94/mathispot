@@ -53,18 +53,18 @@ const Date = () => {
 
                 <Paper elevation={2} className='px-4 py-2 flex-col '>
                   <div className='text-blue-600 flex '>
-                    <div className='flex-none w-14'>
+                    <div className={isMediaMatch ? 'flex-none w-7 ' : 'flex-none w-14'}>
                       {TodayMatch.Events[0].Eps === 'NS' ? <Typography variant={isMediaMatch ? 'subtitle1' : 'title1'} >{TodayMatch.Events[0].Esd}</Typography> : <Typography variant={isMediaMatch ? 'subtitle1' : 'title1'}>{TodayMatch.Events[0].Eps}</Typography>}
                     </div>
                     <div className='flex-1 '>
-                      <div className='flex items-center justify-center'>
+                      <div className={ isMediaMatch ? 'flex items-center justify-center w-[100%] rounded-sm ' : 'flex items-center justify-center'}>
                         <Typography variant={isMediaMatch ? 'title1' : 'h6'}>{TodayMatch.Cnm}</Typography>:
                         <Typography variant={isMediaMatch ? 'title1' : 'h6'}>{TodayMatch.Snm}</Typography>
                       </div>
                    </div>
                   </div>
                   <div className='flex items-center justify-center'>
-                    <div className='w-[50%] flex items-center justify-between'>
+                    <div className={isMediaMatch ? 'w-[100%] flex items-center justify-between ' : 'w-[50%] flex items-center justify-between'}>
                       <div className='flex-1 text-right'>
                         <Typography variant={isMediaMatch ? 'subtitle1' : 'title1'} className={isMediaMatch?'text-xs':'text-base'}>{TodayMatch.Events[0].T1[0].Nm}</Typography>
                       </div>

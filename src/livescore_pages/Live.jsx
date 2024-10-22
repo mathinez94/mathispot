@@ -53,11 +53,11 @@ const Live = () => {
 
                 <Paper elevation={2} className='px-4 py-2 flex-col '>
                   <div className='text-blue-600 flex '>
-                    <div className='flex-none w-14'>
+                    <div className={isMediaMatch ? 'flex-none w-7 ' : 'flex-none w-14'}>
                       {LiveMatch.Events[0].Eps === 'NS' ? <Typography variant={isMediaMatch ? 'subtitle1' : 'title1'}>{LiveMatch.Events[0].Esd}</Typography> : <Typography variant={isMediaMatch ? 'subtitle1' : 'title1'}>{LiveMatch.Events[0].Eps}</Typography>}
                     </div>
                     <div className='flex-1 '>
-                      <div className='flex items-center justify-center'>
+                      <div className={ isMediaMatch ? 'flex items-center justify-center w-[100%] rounded-sm ' : 'flex items-center justify-center'}>
                         <Typography variant={isMediaMatch ? 'title1' : 'h6'}>{LiveMatch.Cnm}</Typography>:
                         <Typography variant={isMediaMatch ? 'title2' : 'h6'}>{LiveMatch.Snm}</Typography>
                       </div>
