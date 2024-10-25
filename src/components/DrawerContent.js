@@ -68,7 +68,7 @@ import Logo from '../images/Mathispot logo.jpg'
       </List>
       </Drawer>
       <IconButton onClick={()=> setOpenDrawer(true)} sx={{padding:'20px'}}>
-         <MenuIcon fontSize='large' color='inherit'/>
+         <MenuIcon fontSize='large' color='inherit' sx={{padding:'5px', border: '2px dotted grey'}}/>
       </IconButton>
     </>
   )
