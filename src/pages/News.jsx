@@ -3,31 +3,30 @@ import axios from 'axios'
 import { useTheme, useMediaQuery,Button, ButtonGroup, Divider, Paper, Typography } from '@mui/material'
 import { useQuery } from '@tanstack/react-query'
 import { Link } from 'react-router-dom'
-import Common from '../components/Common'
 // import { useQueryClient } from '@tanstack/react-query'
 
 
 
 
-
 export const News = () => {
+  
   const [newsCategory, setNewsCategory] = useState('sport')
-
+  
   // const queryClient = useQueryClient()
+  const options = {
+    method: 'GET',
+    url: `https://google-news13.p.rapidapi.com/${newsCategory}`,
+    params: {lr: 'en-US'},
+    headers: {
+      'x-rapidapi-key': '90f1f5611cmsh71a35539b7795f8p1e0ac0jsn17117842c2cb',
+      'x-rapidapi-host': 'google-news13.p.rapidapi.com'
+    }
+  };
 
   useEffect(() => {
-    setNewsCategory(newsCategory)
-},[newsCategory])
+    dataFetcher(options)
+},[options])
 
-const options = {
-  method: 'GET',
-  url: `https://google-news13.p.rapidapi.com/${newsCategory}`,
-  params: {lr: 'en-US'},
-  headers: {
-    'x-rapidapi-key': '90f1f5611cmsh71a35539b7795f8p1e0ac0jsn17117842c2cb',
-    'x-rapidapi-host': 'google-news13.p.rapidapi.com'
-  }
-};
 
 
   const dataFetcher = () => {
@@ -44,9 +43,7 @@ const theme = useTheme();
 const isMediaMatch = useMediaQuery(theme.breakpoints.down('sm'))
   return (
     <div className='bg-white w-full'>
-      <div>
-        <Common />
-      </div>
+
       <div className='w-full '>
       <ButtonGroup variant='outlined' size={isMediaMatch ? 'small' : 'medium'} className='px-3 py-2 ' >
            <Button onClick={()=>setNewsCategory('latest')}>Lattest</Button>

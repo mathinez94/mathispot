@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import PredictionTableContent from '../components/PredictionTableContent'
 import PredictionTableRows from '../components/PredictionTableRows'
-import Common from '../components/Common'
 // import { Typography } from '@mui/material'
 
 
@@ -16,9 +15,6 @@ export const Prediction = () => {
 
   return (
     <div className='bg-white w-full relative'>
-      <div className='mb-2'>
-        <Common />
-      </div>
       <div>
         <PredictionTableContent 
         tableRows={tableRows}

@@ -1,6 +1,5 @@
 import React from 'react'
 import LivescoreNav from './LivescoreNav'
-import Common from '../components/Common'
 import axios from 'axios'
 import { useQuery } from '@tanstack/react-query'
 import { useTheme, useMediaQuery,Paper, Typography } from '@mui/material'
@@ -40,9 +39,6 @@ const Live = () => {
       }
   return (
     <div className='bg-white w-full'>
-      <div>
-        <Common />
-      </div>
       <div>
         <LivescoreNav />
       </div>
