@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import { Drawer, Button, Divider } from '@mui/material';
+import { Drawer } from '@mui/material';
 import { NavLink, Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import logo from '../images/mathispot logo.png'
@@ -30,10 +30,9 @@ const DrawerMenu = () => {
                 <div className='flex flex-col gap-10 items-start justify-between '>
                     <nav className='flex flex-col gap-3 items-start justify-center p-3'>            
                         <div><BookOnlineOutlined /><NavLink to='/' className='navlink' onClick={HideDrawer}>News</NavLink> </div>
-                        <div><SportsSoccer/><NavLink to='/prediction' className='navlink' onClick={HideDrawer}>Livescore</NavLink></div>
-                        <div><BiotechOutlined/><NavLink to='/Peoples' className='navlink' onClick={HideDrawer}>Prediction</NavLink></div>
+                        <div><SportsSoccer/><NavLink to='/livescore' className='navlink' onClick={HideDrawer}>Livescore</NavLink></div>
+                        <div><BiotechOutlined/><NavLink to='/prediction' className='navlink' onClick={HideDrawer}>Prediction</NavLink></div>
                     </nav>
-                    {/* <Divider /> */}
                 </div>
             </div>
         </Drawer>

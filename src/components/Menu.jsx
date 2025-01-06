@@ -1,9 +1,14 @@
 import React from 'react'
 import logo from '../../src/images/mathispot logo.png'
 import {  Link, NavLink } from 'react-router-dom';
-import { Button } from '@mui/material';
+import { Button, Typography } from '@mui/material';
+import { auth } from '../Firebase-config';
 
-const Menu = () => {
+
+const Menu = ({isAuth}) => {
+
+
+
   return (
     <div>
         <div className='w-full flex items-center justify-center h-20'>
@@ -20,7 +25,17 @@ const Menu = () => {
                       <NavLink to='/livescore' className='navlink'>Livescore</NavLink>
                 </nav>
                 <div className='flex-2 mr-3'>
-                  <Button variant='contained' color='primary'><Link to='/login'>Login</Link> </Button>
+                  {
+                    isAuth ? 
+                    <div className='flex gap-2 items-center justify-center'>
+                      <Typography variant='h6' fontFamily='serif'>Welcome {auth.currentUser.displayName}</Typography>
+                      <img src={auth.currentUser.photoURL} alt={auth.currentUser.displayName} className='w-8 rounded-full'/>
+                    </div>
+                    :
+                    <div className=''>
+                      <Button variant='contained' color='primary'><Link to='/sign up'>Login / sign up</Link> </Button>
+                    </div>
+                  }
                 </div>
               </div>
           </div>

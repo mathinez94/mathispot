@@ -1,11 +1,16 @@
 import React,{useState}  from 'react'
 import CancelIcon from '@mui/icons-material/Cancel'
-import { Button, Divider, Form, Input } from 'antd'
+import { Button, Divider, Form, Input, Typography } from 'antd'
 import { useForm } from 'antd/es/form/Form'
+// import { auth } from '../Firebase-config'
 
 const PredictionTableRows = ({setShowForm,addRow}) => {
     const [formInputs, setFormInputs] = useState([]);
     const [form]=useForm();
+    
+    // const username = auth.currentUser.displayName
+   
+    console.log()
    
     const handleSubmit = (value) => {
         setFormInputs(value);
@@ -14,18 +19,18 @@ const PredictionTableRows = ({setShowForm,addRow}) => {
         
     }
     return (
-        <div className='mt-6 shadow-lg w-[60%]'>
+        <div className='mt-6 shadow-lg w-[60%] h-[100%]'>
         <div className=''>
             <CancelIcon  className='text-right text-red-500' onClick={()=>setShowForm(false)}/>
             <Form onFinish={handleSubmit} form={form} labelCol={{span: 10}}>
-                <Form.Item
+                {/* <Form.Item
                 name='username' label='Username' 
                 rules={[
                     {required: true, message:'kindly provide a name'}
                 ]}
                 >
-                    <Input placeholder='type your username'/>
-                </Form.Item>
+                <Typography>{auth.currentUser.displayName}</Typography>
+                </Form.Item> */}
                 <Form.Item
                 name='country' label='Country' 
                 rules={[

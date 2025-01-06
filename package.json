@@ -15,6 +15,7 @@
     "antd": "^5.20.0",
     "axios": "^1.4.0",
     "date-fns": "^2.30.0",
+    "firebase": "^11.1.0",
     "query": "^0.2.0",
     "react": "^18.2.0",
     "react-calendar": "^4.3.0",
@@ -26,6 +27,7 @@
     "react-router-dom": "^6.11.1",
     "react-scripts": "5.0.1",
     "react-whatsapp": "^0.3.0",
+    "universal-cookie": "^7.2.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

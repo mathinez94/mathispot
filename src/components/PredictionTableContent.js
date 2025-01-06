@@ -1,9 +1,15 @@
-import React from 'react'
-import { Button, Carousel, Divider, Table, Typography } from 'antd'
+import React,{useState} from 'react'
+import { Button, Divider, Table, Typography } from 'antd'
 import { useTheme, useMediaQuery, Paper } from '@mui/material'
+import Cookies from 'universal-cookie'
+
+
+const cookie = new Cookies();
 
 const PredictionTableContent = ({tableRows,setShowForm}) => {
     const {Title, Text, Paragraph} = Typography
+
+    const [isAuth, setIsAuth] = useState(cookie.get('auth-token'))
 
     
     console.log(tableRows)
@@ -32,23 +38,17 @@ const PredictionTableContent = ({tableRows,setShowForm}) => {
   ]
 
   const theme = useTheme();
-  const isMediaMatch = useMediaQuery(theme.breakpoints.down('sm'))
+  const isMediaMatch = useMediaQuery(theme.breakpoints.down('md'))
 
 const style1 = 'w-full h-48 flex items-center justify-center px-3' 
 const style2 =  isMediaMatch ? 'font-serif text-sm' : 'font-serif text-lg'
 
   return (
-    <div className='relative'>
+    <div className=''>
         <div className='flex-col h-[100%] w-full items-center justify-center'>
 
-            <div className={isMediaMatch ?'' : 'bg-white h-[70vh] w-full'}>
-                <Carousel
-                autoplay
-                dots
-                draggable
-                pauseOnHover
-                >
-                    <div className='bg-white h-[70vh] w-full'>
+            <div className={isMediaMatch ?'' : 'bg-white w-full'}>
+                    <div className='bg-white w-full'>
                         <div>
                             <Typography className={' flex-col items-center justify-center mt-3'}>
                                 <Title className='text-center  font-serif'>welcome to fun prediction page</Title>
@@ -64,16 +64,19 @@ const style2 =  isMediaMatch ? 'font-serif text-sm' : 'font-serif text-lg'
                                     <div><Paper elevation={2} className={style1}><Text className={style2}>Ensure correct spellings before you submit your Predictions</Text></Paper></div>
                                 </div>
                         </div>
-                    </div>
-                    <div className='bg-white h-[100vh] w-full flex items-center justify-center'>
-                        <Title className='w-full h-[50vh] flex items-center justify-center'>
-                        <Text  className='font-serif text-5xl'>Cheers to Winning!!!</Text>
-                        </Title>
-                    </div>
-                </Carousel>                 
+                        <div className='w-full h-32 flex items-center justify-center'>
+                            <Title className='w-full flex items-center justify-center'>
+                                <Text  className='font-serif text-2xl'>Cheers to Winning!!!</Text>
+                            </Title>
+                        </div>
+                    </div>                
             </div>
-            <div className="px-5">
-                <Button type='primary' onClick={()=>setShowForm(true)} block>Add Prediction</Button>
+            <div className="px-5 mt-3">
+               {isAuth ? 
+               <Button type='primary' onClick={()=>setShowForm(true)} block>Add Prediction</Button>
+            :
+                <Button type='default' block>Add Prediction</Button>
+            }
                 
                         <Table
                             columns={column}
