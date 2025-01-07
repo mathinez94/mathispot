@@ -1,15 +1,12 @@
-import React,{useState} from 'react'
+import React from 'react'
 import { Button, Divider, Table, Typography } from 'antd'
 import { useTheme, useMediaQuery, Paper } from '@mui/material'
-import Cookies from 'universal-cookie'
 
 
-const cookie = new Cookies();
-
-const PredictionTableContent = ({tableRows,setShowForm}) => {
+const PredictionTableContent = ({tableRows, setShowForm, isAuth}) => {
     const {Title, Text, Paragraph} = Typography
 
-    const [isAuth, setIsAuth] = useState(cookie.get('auth-token'))
+    
 
     
     console.log(tableRows)

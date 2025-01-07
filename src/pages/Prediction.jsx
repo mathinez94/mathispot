@@ -4,7 +4,7 @@ import PredictionTableRows from '../components/PredictionTableRows'
 // import { Typography } from '@mui/material'
 
 
-export const Prediction = () => {
+export const Prediction = ({isAuth}) => {
   const [showForm, setShowForm] = useState(false)
   
   const [tableRows, setTableRows] = useState([]);
@@ -19,6 +19,7 @@ export const Prediction = () => {
         <PredictionTableContent 
         tableRows={tableRows}
         setShowForm={setShowForm}
+        isAuth={isAuth}
         />
       </div>
       

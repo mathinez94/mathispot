@@ -24,7 +24,7 @@ function App() {
     createRoutesFromElements(
       <Route path='/' element={<Root isAuth={isAuth}/>}>
           <Route index element={<News />}/>
-          <Route path='/prediction' element={<Prediction/>}/>
+          <Route path='/prediction' element={<Prediction isAuth={isAuth}/>}/>
           <Route path='/livescore' element={<Livescore/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/sign up' element={<SignUp setIsAuth={setIsAuth}/>}/>
