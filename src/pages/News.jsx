@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useTheme, useMediaQuery,Button, ButtonGroup, Divider, Paper, Typography } from '@mui/material'
 import { useQuery } from '@tanstack/react-query'
 import { Link } from 'react-router-dom'
-// import { useQueryClient } from '@tanstack/react-query'
+
 
 
 
@@ -25,7 +25,7 @@ export const News = () => {
 
   useEffect(() => {
     dataFetcher(options)
-},[options])
+},[dataFetcher])
 
 
 
