@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import axios from 'axios'
-import { useTheme, useMediaQuery,Button, ButtonGroup, Divider, Paper, Typography } from '@mui/material'
+import { useTheme, useMediaQuery, Divider, Paper, Typography } from '@mui/material'
 import { useQuery } from '@tanstack/react-query'
 import { Link } from 'react-router-dom'
+import { options } from '../apis/Newsapi'
 
 
 
@@ -10,18 +11,10 @@ import { Link } from 'react-router-dom'
 
 export const News = () => {
   
-  const [newsCategory, setNewsCategory] = useState('sport')
+
   
   // const queryClient = useQueryClient()
-  const options = {
-    method: 'GET',
-    url: `https://google-news13.p.rapidapi.com/${newsCategory}`,
-    params: {lr: 'en-US'},
-    headers: {
-      'x-rapidapi-key': 'f0b4169e9cmsh201998d27af28a4p107c0ajsn708e87b389ee',
-      'x-rapidapi-host': 'google-news13.p.rapidapi.com'
-    }
-  };
+ 
 
   useEffect(() => {
     dataFetcher(options)
@@ -40,21 +33,10 @@ export const News = () => {
 //  console.log(data)
 
 const theme = useTheme();
-const isMediaMatch = useMediaQuery(theme.breakpoints.down('sm'))
+const isMediaMatch = useMediaQuery(theme.breakpoints.down('md'))
   return (
     <div className='bg-white w-full'>
-
-      <div className='w-full '>
-      <ButtonGroup variant='outlined' size={isMediaMatch ? 'small' : 'medium'} className='px-3 py-2 ' >
-           <Button onClick={()=>setNewsCategory('latest')}>Lattest</Button>
-           <Button onClick={()=>setNewsCategory('sport')}>Sport</Button>
-           <Button onClick={()=>setNewsCategory('world')}>World</Button>
-           <Button onClick={()=>setNewsCategory('business')}>Business</Button>
-           <Button onClick={()=>setNewsCategory('health')}>Health</Button>
-           <Button onClick={()=>setNewsCategory('science')}>Science</Button>
-      </ButtonGroup>
-      </div>
-      <Divider className=' mt-4 mb-6'><Typography variant={isMediaMatch ? 'title1' : 'h4'} color='primary' fontFamily={'serif'}>{newsCategory} news</Typography></Divider>
+      <Divider className=' mt-4 mb-6'><Typography variant={isMediaMatch ? 'title1' : 'h4'} color='primary' fontFamily={'serif'}>Sports news</Typography></Divider>
       <div className='mt-5 px-4'>
         {
           data?.data.items.map(newsData => {

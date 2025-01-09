@@ -1,6 +1,5 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-
 # dependencies
 /node_modules
 /.pnp
@@ -24,10 +23,8 @@ yarn-debug.log*
 yarn-error.log*
 
 .codegpt
+src/Firebase-config.js
 
-Firebase-config.txt
-.auth
-.firebase
-
-
-*.firebase
+src/apis/Dateapi.jsx
+src/apis/Liveapi.jsx
+src/apis/Newsapi.jsx
