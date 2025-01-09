@@ -26,4 +26,8 @@ yarn-error.log*
 .codegpt
 
 Firebase-config.txt
+.auth
+.firebase
 
+
+*.firebase
