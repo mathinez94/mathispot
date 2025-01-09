@@ -25,6 +25,5 @@ yarn-error.log*
 
 .codegpt
 
-.Firebase-config
-.options
+Firebase-config.txt
 

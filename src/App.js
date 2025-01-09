@@ -6,6 +6,8 @@ import {QueryClient,QueryClientProvider} from '@tanstack/react-query'
 import {News} from './pages/News'
 import {Prediction} from './pages/Prediction'
 import {Livescore} from './pages/Livescore'
+import Live from './livescore_pages/Live'
+import Date from './livescore_pages/Date'
 import Login from '../src/pages/Login'
 import SignUp from './pages/SignUp';
 import Cookies from 'universal-cookie'
@@ -25,7 +27,9 @@ function App() {
       <Route path='/' element={<Root isAuth={isAuth}/>}>
           <Route index element={<News />}/>
           <Route path='/prediction' element={<Prediction isAuth={isAuth}/>}/>
-          <Route path='/livescore' element={<Livescore/>}/>
+          <Route path='/livescore' element={<Livescore/>} />
+          <Route path='/live' element={<Live/>}/>
+            <Route path='/today' element={<Date/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/sign up' element={<SignUp setIsAuth={setIsAuth}/>}/>
         </Route>

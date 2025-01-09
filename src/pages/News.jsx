@@ -25,7 +25,7 @@ export const News = () => {
 
   useEffect(() => {
     dataFetcher(options)
-},[dataFetcher])
+},[])
 
 
 
