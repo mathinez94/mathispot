@@ -4,7 +4,7 @@ import axios from 'axios'
 import { useQuery } from '@tanstack/react-query'
 import { useTheme, useMediaQuery,Paper, Typography } from '@mui/material'
 import { Spin } from 'antd'
-import { options } from '../apis/Liveapi'
+
 
 const Live = () => {
 
@@ -13,6 +13,18 @@ const Live = () => {
   
   
 
+    const options = {
+      method: 'GET',
+      url: 'https://livescore6.p.rapidapi.com/matches/v2/list-live',
+      params: {
+        Category: 'soccer',
+        Timezone: '-1'
+      },
+      headers: {
+        'X-RapidAPI-Key': `${process.env.REACT_APP_LIVE_API_KEY}`,
+        'X-RapidAPI-Host': 'livescore6.p.rapidapi.com'
+      }
+    };
       const dataFetcher = () => {
         return  axios.request(options);
       }

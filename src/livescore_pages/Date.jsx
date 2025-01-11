@@ -4,10 +4,25 @@ import axios from 'axios'
 import { useQuery } from '@tanstack/react-query'
 import { useTheme, useMediaQuery,Paper, Typography } from '@mui/material'
 import { Spin } from 'antd'
-import { options } from '../apis/Dateapi'
+
 
 
 const Date = () => {
+
+  const options = {
+    method: 'GET',
+    url: 'https://livescore6.p.rapidapi.com/matches/v2/list-by-date',
+    params: {
+      Category: 'soccer',
+      Date: '20250109',
+      Timezone: '-1'
+    },
+    headers: {
+      'x-rapidapi-key': `${process.env.REACT_APP_DATE_API_KEY}`,
+      'x-rapidapi-host': 'livescore6.p.rapidapi.com'
+    }
+  };
+
   
   const dataFetcher = () => {
     return  axios.request(options);

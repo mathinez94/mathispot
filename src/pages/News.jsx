@@ -3,24 +3,30 @@ import axios from 'axios'
 import { useTheme, useMediaQuery, Divider, Paper, Typography } from '@mui/material'
 import { useQuery } from '@tanstack/react-query'
 import { Link } from 'react-router-dom'
-import { options } from '../apis/Newsapi'
 
 
-
+const options = {
+  method: 'GET',
+  url: `https://google-news13.p.rapidapi.com/sport`,
+  params: {lr: 'en-US'},
+  headers: {
+    'x-rapidapi-key': `${process.env.REACT_APP_NEW_API_KEY}`,
+    'x-rapidapi-host': 'google-news13.p.rapidapi.com'
+  }
+};
 
 
 export const News = () => {
 
- 
-  const dataFetcher = () => {
-    return  axios.request(options);
-  }
 
   useEffect(() => {
     dataFetcher(options)
 },[])
 
 
+const dataFetcher = () => {
+  return  axios.request(options);
+}
 
 
   const {data} = useQuery({

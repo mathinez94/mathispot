@@ -23,8 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 .codegpt
-src/Firebase-config.js
 
-src/apis/Dateapi.jsx
-src/apis/Liveapi.jsx
-src/apis/Newsapi.jsx
+.env
