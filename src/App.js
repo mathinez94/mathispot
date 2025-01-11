@@ -29,7 +29,7 @@ function App() {
           <Route path='/prediction' element={<Prediction isAuth={isAuth}/>}/>
           <Route path='/livescore' element={<Livescore/>} />
           <Route path='/live' element={<Live/>}/>
-            <Route path='/today' element={<Date/>}/>
+          <Route path='/today' element={<Date/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/sign up' element={<SignUp setIsAuth={setIsAuth}/>}/>
         </Route>

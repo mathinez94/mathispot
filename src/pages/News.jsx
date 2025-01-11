@@ -10,11 +10,11 @@ import { options } from '../apis/Newsapi'
 
 
 export const News = () => {
-  
 
-  
-  // const queryClient = useQueryClient()
  
+  const dataFetcher = () => {
+    return  axios.request(options);
+  }
 
   useEffect(() => {
     dataFetcher(options)
@@ -22,9 +22,6 @@ export const News = () => {
 
 
 
-  const dataFetcher = () => {
-    return  axios.request(options);
-  }
 
   const {data} = useQuery({
     queryKey: ['news'],
